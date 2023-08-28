@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function account() {
+      var acc=parseInt(prompt("Enter the Account Number:"));
+      var start_bal=parseInt(prompt("Enter the Balance at the beginning of the month:"));
+      var charge=parseInt(prompt("Total of all items charged by this customer this month:"));
+      var total_credit=parseInt(prompt("Total of all credits applied to this customer's account this month:"));
+      var credit_limit=parseInt(prompt("Allowed credit limit:"));
+      var new_balance=(start_bal+charge-total_credit);
+      var result=document.getElementById("new")
+      if(new_balance>credit_limit)
+      {
+        result.innerHTML="The new Balance is "+new_balance+" and credit limit exceed";
+      }
+      else{
+        result.innerHTML="The new Balance is "+new_balance+" and its not exceed";
+      }
+}
+    </script>
+  </head>
+  <body>
+    <div class="new" id="new">
+      <button onclick="account()">Check Balance</button>
+    </div>
+  </body>
+</html>

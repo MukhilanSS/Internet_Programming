@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function isprime(n){
+        if (n <= 1) {
+          return false;
+        }
+
+        for (var i = 2; i < Math.sqrt(n); i++) {
+          if (n % i == 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      function palindrome(string){
+        var count = 0;
+        for (var i = 0; i < string.length; i++) {
+          for (var j = i + 1; j < string.length; j++) {
+            var result = string.substring(i, j);
+            result = result.split('').reverse().join('');
+            if (string === result && isprime(result.length)) {
+              count = count + 1;
+            }
+          }
+        }
+        return count;
+      }
+
+      var string = "ababa";
+      var sub = palindrome(string);
+      alert(sub);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

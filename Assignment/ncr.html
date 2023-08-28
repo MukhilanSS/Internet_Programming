@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function fact(a){
+        if(a>1){
+        return a * fact(a - 1);
+      }
+        else {
+          return 1;
+        }
+      }
+      function ncr(n,r){
+        var nr = n-r;
+        var n1 = fact(n);
+        var r1 = fact(r);
+        var nr1 = fact(nr);
+        var ncr = n1/(r1 * nr1);
+        alert(ncr);
+      }
+      var n = 5;
+      var r = 2;
+      ncr(n, r);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

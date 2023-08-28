@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var a=parseInt(prompt("Enter the four digit number:"))
+      var arr=[];
+      for(var i=3;i>=0;i--){
+        arr[i]=a%10;
+        arr[i]=(arr[i]+7)%10;
+        a=Math.floor(a/10);
+      }
+      var temp=arr[0];
+      arr[0]=arr[2];
+      arr[2]=temp;
+      var temp1=arr[1];
+      arr[1]=arr[3];
+      arr[3]=temp1;
+      alert(arr);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
