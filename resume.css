@@ -1,0 +1,19 @@
+/* .table{
+  border-collapse: collapse;
+} */
+h2,h1{
+color:#404040;
+}
+th{
+  border: solid black 2px;
+}
+td{
+  border-right:  solid black 2px;
+}
+hr{
+  height: 10px;
+  background-color: grey;
+}
+/* li,p,ol,ul,{
+
+} */
